@@ -67,7 +67,7 @@ var poll = function () {
         	}
 
 		//send a ping that this is working correctly, but only once per hour. We already have a TTL cache for this
-		if(!uptimeAlertsHourly.get('pinged')) {
+		if(awsKeys.uptimePingURL && !uptimeAlertsHourly.get('pinged')) {
 			console.log('Sending startup or hourly ping to https://healthchecks.io to show script is alive');
 			await fetch(awsKeys.uptimePingURL)
 				.then(()=>uptimeAlertsHourly.set('pinged', true))
