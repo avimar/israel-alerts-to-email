@@ -22,4 +22,6 @@ To run:
 
 NOTE: You must run this from an Israel IP to access the pikud haoref website.
 
-`uptimePingURL` via http://healthchecks.io optional.
+`uptimePingURL` via http://healthchecks.io optional. If you're not using it, set it to a blank value to disable the CLI warning.
+
+`locationToMonitor` is matched via an `includes`, so set your value appropriately.
