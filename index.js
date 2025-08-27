@@ -9,7 +9,10 @@ const client = new SESv2Client({
 	credentials: { accessKeyId: awsKeys.accessKey, secretAccessKey: awsKeys.secretKey },
 	//credentials: { accessKeyId: 'ANY_STRING
 	});
-
+if(awsKeys.uptimePingURL=="https://hc-ping.com/****-***-***-****-********") {
+	awsKeys.uptimePingURL=null; //disable demo URL
+	console.log('Disabling default uptimePingURL, please set your own URL in aws.json if you want this feature. Sign up at https://healthchecks.io/');
+	}
 
 // Set polling interval in millis
 var interval = 5  /*seconds*/ * 1000 /*ms*/;
