@@ -11,7 +11,8 @@ Create aws.json for config like so, and customize all the values:
 	"to": ["destination-for-alert@googlegroups.com"],
 	"cc": ["if-applicable@gmail.com"],
 	"uptimePingURL": "https://hc-ping.com/****-***-***-****-********",
-	"locationToMonitor": "תל ציון"
+	"locationToMonitor": "תל ציון",
+    "pollingIntervalSeconds": 5
 }
 ```
 
