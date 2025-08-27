@@ -15,6 +15,8 @@ if(awsKeys.uptimePingURL=="https://hc-ping.com/****-***-***-****-********") {
 	}
 
 // Set polling interval in millis
+if(!awsKeys.pollingIntervalSeconds) awsKeys.pollingIntervalSeconds=5; //default 5 seconds
+if(awsKeys.pollingIntervalSeconds<1) awsKeys.pollingIntervalSeconds=1; //minimum 1 second
 var interval = awsKeys.pollingIntervalSeconds  /*seconds*/ * 1000 /*ms*/;
 
 const DEDUPLICATION_COOLDOWN_SECONDS = 5 * 60; // 5 minutes
