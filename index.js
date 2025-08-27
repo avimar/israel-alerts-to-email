@@ -15,7 +15,7 @@ if(awsKeys.uptimePingURL=="https://hc-ping.com/****-***-***-****-********") {
 	}
 
 // Set polling interval in millis
-var interval = 5  /*seconds*/ * 1000 /*ms*/;
+var interval = awsKeys.pollingIntervalSeconds  /*seconds*/ * 1000 /*ms*/;
 
 const DEDUPLICATION_COOLDOWN_SECONDS = 5 * 60; // 5 minutes
 // Create a new cache instance.
