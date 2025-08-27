@@ -14,3 +14,11 @@ Create aws.json for config like so, and customize all the values:
 	"locationToMonitor": "תל ציון"
 }
 ```
+
+To run:
+- `npm install`
+- `node index.js`
+
+NOTE: You must run this from an Israel IP to access the pikud haoref website.
+
+`uptimePingURL` via http://healthchecks.io optional.
