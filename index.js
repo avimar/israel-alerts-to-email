@@ -32,7 +32,7 @@ async function sendEmail(email){
 		FromEmailAddress: awsKeys.from,
 		Destination: { // Destination
 			ToAddresses: awsKeys.to,
-			CcAddresses: awsKeys.cc},
+			CcAddresses: awsKeys.cc||[]},
 		Content: {
 			Simple: {
 				Subject: { Data: email.subject },
